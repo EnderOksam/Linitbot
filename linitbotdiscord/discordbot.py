@@ -35,15 +35,7 @@ async def on_message(message):
      search = await client.wait_for("message")
      result = wikipedia.summary(search.content)
      await message.channel.send(result)
-    
-    
-    if message.content.startswith("stupid bot"):
-        stupid = random.randint(1,2)
-        if stupid == 1:
-             await message.channel.send(":(")
-        if stupid == 2:
-             await message.channel.send("you're stupid!")
-    
+     
     if message.content.startswith("!math"):
         await message.channel.send("ok, what is the first number?")
         num1 = await client.wait_for("message")
